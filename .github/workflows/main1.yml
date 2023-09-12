@@ -1,0 +1,54 @@
+name: Dev to stage pipeline
+
+on:
+
+on:
+
+  push:
+
+    branches:
+
+      - Dev # Trigger this workflow on pushes to the dev branch
+
+ 
+
+jobs:
+
+  deploy_to_stage:
+
+    runs-on: ubuntu-latest
+
+ 
+
+    steps:
+
+      - name: Checkout code
+
+        uses: actions/checkout@v2
+
+ 
+
+      - name: Build and test 
+
+        run: |
+
+          python main.py
+
+ 
+
+      - name: Push to stage branch
+
+        if: github.ref == 'refs/heads/dev' # Only run this step for pushes to the dev branch
+
+        run: |
+
+          git config user.name "Arti Tambe"
+
+          git config user.email "artitambe2602@gmail.com"
+
+          git checkout stage
+
+          git merge --no-ff --no-edit dev
+
+          git push origin stage
+
