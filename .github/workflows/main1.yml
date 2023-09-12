@@ -2,8 +2,6 @@ name: Dev to stage pipeline
 
 on:
 
-on:
-
   push:
 
     branches:
