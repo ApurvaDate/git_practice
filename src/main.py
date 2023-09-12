@@ -1,6 +1,6 @@
 ### Integrate HTML With Flask
 ### HTTP verb GET And POST
-import flask 
+# import flask 
 from flask import Flask,redirect,url_for,render_template,request
 
 app=Flask(__name__)
