@@ -6,7 +6,7 @@ on:
 
     branches:
 
-      - Dev # Trigger this workflow on pushes to the dev branch
+      - staging # Trigger this workflow on pushes to the dev branch
 
  
 
