@@ -1,9 +1,8 @@
 ### Building Url Dynamically 
 ####Variable Rules And URL Building
-import flask
-
+# import flask
 from flask import Flask,redirect,url_for
-import pandas
+# import pandas
 app=Flask(__name__)
 
 @app.route('/')
